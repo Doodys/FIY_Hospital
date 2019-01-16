@@ -1,0 +1,9 @@
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\bin\Debug\netstandard2.0\EmployeeClassLibrary.deps.json
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\bin\Debug\netstandard2.0\EmployeeClassLibrary.dll
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\bin\Debug\netstandard2.0\EmployeeClassLibrary.pdb
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.csprojAssemblyReference.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.csproj.CoreCompileInputs.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.AssemblyInfoInputs.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.AssemblyInfo.cs
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.dll
+E:\Kody\FIY_Hospital\FIY_Hospital\EmployeeClassLibrary\EmployeeClassLibrary\obj\Debug\netstandard2.0\EmployeeClassLibrary.pdb
