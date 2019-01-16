@@ -18,12 +18,12 @@ namespace Employees_Space
 
         public static void _Convert()
         {
-            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string filePath = Environment.CurrentDirectory;
             string extension = ".csv";
-            filePath += @"\empl\" + extension;
+            filePath += @"\Employees" + extension;
             List<Employee> EmployeesData = File.ReadAllLines(filePath)
                                            .Skip(1)
-                                           .Select(v => Employee.FromCsv(v))
+                                           .Select(v => FromCsv(v))
                                            .ToList();
         }
 

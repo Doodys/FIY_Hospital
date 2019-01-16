@@ -27,7 +27,7 @@ namespace FIY_Hospital
         private void LOGIN_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login InitializeData = new Login();
+            LoginScreen InitializeData = new LoginScreen();
             InitializeData.Show();
         }
 

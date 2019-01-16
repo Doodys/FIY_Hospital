@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace FIY_Hospital
 {
-    public partial class Login : Form
+    public partial class LoginScreen : Form
     {
-        public Login()
+        public LoginScreen()
         {
             InitializeComponent();
         }
@@ -17,11 +17,11 @@ namespace FIY_Hospital
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 
-            //}
-            //catch(IndexOutOfRangeException) { MessageBox.Show("Wrong username or password."); }
+            }
+            catch(IndexOutOfRangeException) { MessageBox.Show("Wrong username or password."); }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
