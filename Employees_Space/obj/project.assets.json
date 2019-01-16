@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\EmployeeClassLibrary\\EmployeeClassLibrary\\EmployeeClassLibrary.csproj",
-      "projectName": "EmployeeClassLibrary",
-      "projectPath": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\EmployeeClassLibrary\\EmployeeClassLibrary\\EmployeeClassLibrary.csproj",
+      "projectUniqueName": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\Employees_Space\\Employees_Space.csproj",
+      "projectName": "Employees_Space",
+      "projectPath": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\Employees_Space\\Employees_Space.csproj",
       "packagesPath": "C:\\Users\\dudys\\.nuget\\packages\\",
-      "outputPath": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\EmployeeClassLibrary\\EmployeeClassLibrary\\obj\\",
+      "outputPath": "E:\\Kody\\FIY_Hospital\\FIY_Hospital\\Employees_Space\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
