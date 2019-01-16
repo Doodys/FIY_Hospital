@@ -25,29 +25,9 @@ namespace FIY_Hospital
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            string startupPath = System.IO.Directory.GetCurrentDirectory();
-            SqlConnection FIYconnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + startupPath + @"\FIY_Hospital.mdf;Integrated Security=True;");
-            SqlDataAdapter FIYadapter = new SqlDataAdapter("Select [ROLE] From [Table] Where [USERNAME]='" + textBox1.Text + "' and [PASSWORD]='" + textBox2.Text + "'", FIYconnection);
-            DataTable FIYdata = new DataTable();
-            FIYadapter.Fill(FIYdata);
             try
             {
-                if (FIYdata.Rows[0][0].ToString() == "Admin")
-                {
-                    this.Close();
-                    Client FIYload = new Client();
-                    FIYload.Show();
-                }
-                else if (FIYdata.Rows[0][0].ToString() == "Doctor")
-                {
-                    this.Close();
-                    MessageBox.Show("You are doctor.");
-                }
-                else if (FIYdata.Rows[0][0].ToString() == "Nurse")
-                {
-                    this.Close();
-                    MessageBox.Show("You are nurse.");
-                }
+                
             }
             catch(IndexOutOfRangeException) { MessageBox.Show("Wrong username or password."); }
         }
