@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EmployeeClassLibrary;
+using Employees_Space;
 
 namespace FIY_Hospital
 {
@@ -18,7 +18,7 @@ namespace FIY_Hospital
             InitializeComponent();
         }
 
-        public void WelcomeScreen_Load(object sender, EventArgs e)
+        private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             Show();
             Employee._Convert();
@@ -27,7 +27,7 @@ namespace FIY_Hospital
         private void LOGIN_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 InitializeData = new Form1();
+            Login InitializeData = new Login();
             InitializeData.Show();
         }
 

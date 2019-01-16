@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace EmployeeClassLibrary
+namespace Employees_Space
 {
     public class Employee
     {
@@ -16,11 +16,10 @@ namespace EmployeeClassLibrary
         public string PWD { get; set; }
         public string Specialization { get; set; }
 
-        public string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        public string extension = ".csv";
-
-        public void _Convert()
+        public static void _Convert()
         {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string extension = ".csv";
             filePath += @"\empl\" + extension;
             List<Employee> EmployeesData = File.ReadAllLines(filePath)
                                            .Skip(1)

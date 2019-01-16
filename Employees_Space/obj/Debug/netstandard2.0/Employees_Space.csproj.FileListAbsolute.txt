@@ -1,0 +1,9 @@
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\bin\Debug\netstandard2.0\Employees_Space.deps.json
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\bin\Debug\netstandard2.0\Employees_Space.dll
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\bin\Debug\netstandard2.0\Employees_Space.pdb
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.csprojAssemblyReference.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.csproj.CoreCompileInputs.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.AssemblyInfoInputs.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.AssemblyInfo.cs
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.dll
+E:\Kody\FIY_Hospital\FIY_Hospital\Employees_Space\obj\Debug\netstandard2.0\Employees_Space.pdb

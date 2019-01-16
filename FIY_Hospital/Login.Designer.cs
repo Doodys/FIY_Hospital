@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace FIY_Hospital
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -32,7 +32,7 @@ namespace FIY_Hospital
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LOGIN = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();

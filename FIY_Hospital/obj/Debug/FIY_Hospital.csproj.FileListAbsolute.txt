@@ -25,3 +25,7 @@ E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospi
 E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CopyComplete
 E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.exe
 E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.pdb
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csprojAssemblyReference.cache
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.exe.config
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.exe
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.pdb
