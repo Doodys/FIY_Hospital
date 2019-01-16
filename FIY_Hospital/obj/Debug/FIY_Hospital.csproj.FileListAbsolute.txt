@@ -1,0 +1,27 @@
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.exe.config
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.exe
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.pdb
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csprojAssemblyReference.cache
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Form1.resources
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Properties.Resources.resources
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.GenerateResource.cache
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CoreCompileInputs.cache
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.exe
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.pdb
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.WelcomeScreen.resources
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\AlphaBlendTextBox.dll
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CopyComplete
+D:\STUDIA\WSZELAKA_INFA\PROGRAMOWANIE C#\Obiektowe\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Client.resources
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.exe.config
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.exe
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\bin\Debug\FIY_Hospital.pdb
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csprojAssemblyReference.cache
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Client.resources
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Form1.resources
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.Properties.Resources.resources
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.WelcomeScreen.resources
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.GenerateResource.cache
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CoreCompileInputs.cache
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CopyComplete
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.exe
+E:\Kody\Szpital\szpital\Projekt_02\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.pdb
