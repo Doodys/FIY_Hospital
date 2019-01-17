@@ -19,6 +19,8 @@ namespace Employees_Space
         public string Specialization { get; set; }
 
         public static List<Employee> EmployeesData;
+        public static string[] HeadersEmployee = { "Name", "Surname", "PWD", "Specialization" }; //3, 4, 6, 7
+        public static string[] HeadersAdmin = { "Username", "Password",  "Name", "Surname", "Pesel", "PWD", "Specialization" }; //0, 1, 3, 4, 5, 6, 7
 
         public static void _Convert()
         {
@@ -110,7 +112,6 @@ namespace Employees_Space
                 sw.Write(sb.ToString());
                 sw.Close();
             }
-
         }
     }
 }

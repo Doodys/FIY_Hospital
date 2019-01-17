@@ -6,8 +6,8 @@ namespace FIY_Hospital
 {
     public partial class LoginScreen : Form
     {
-        public string Username = "";
-        public string Password = "";
+        public static string Username = "";
+        string Password = "";
 
         public LoginScreen()
         {
