@@ -49,8 +49,11 @@ namespace Employees_Space
     {
         public static bool CheckLoginData(string login, string pass)
         {
+
             int index1 = Employee.EmployeesData.FindIndex(a => a.Username == login);
-            int index2 = Employee.EmployeesData.FindIndex(a => a.Password == login);
+            int index2 = Employee.EmployeesData.FindIndex(a => a.Password == pass);
+
+            if(index1 == -1) { index1 = -2; }
 
             if (index1 == index2) { return true; }
             else { return false; }

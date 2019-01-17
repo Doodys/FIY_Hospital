@@ -23,7 +23,7 @@ namespace FIY_Hospital
 
             bool AllowLogin = LoginData.CheckLoginData(Username, Password);
 
-            if (AllowLogin)
+            if (AllowLogin == true)
             {
                 this.Hide();
                 Client InitializeData = new Client();
