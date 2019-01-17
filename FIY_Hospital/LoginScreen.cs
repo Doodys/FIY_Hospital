@@ -6,6 +6,9 @@ namespace FIY_Hospital
 {
     public partial class LoginScreen : Form
     {
+        public string Username = "";
+        public string Password = "";
+
         public LoginScreen()
         {
             InitializeComponent();
@@ -18,8 +21,8 @@ namespace FIY_Hospital
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            string Username = textBox1.Text;
-            string Password = textBox2.Text;
+            Username = textBox1.Text;
+            Password = textBox2.Text;
 
             bool AllowLogin = LoginData.CheckLoginData(Username, Password);
 

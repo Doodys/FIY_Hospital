@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Employees_Space;
+using System;
 using System.Windows.Forms;
 
 namespace FIY_Hospital
@@ -20,6 +14,13 @@ namespace FIY_Hospital
         private void Client_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void doctorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EmployeesList InitializeData = new EmployeesList();
+            InitializeData.Show();
         }
 
         private void Client_FormClosing(object sender, FormClosingEventArgs e)

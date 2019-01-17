@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Text;
+using System.Reflection;
 
 namespace Employees_Space
 {
@@ -49,14 +51,66 @@ namespace Employees_Space
     {
         public static bool CheckLoginData(string login, string pass)
         {
-
             int index1 = Employee.EmployeesData.FindIndex(a => a.Username == login);
             int index2 = Employee.EmployeesData.FindIndex(a => a.Password == pass);
 
-            if(index1 == -1) { index1 = -2; }
+            if (index1 == -1) { index1 = -2; }
 
             if (index1 == index2) { return true; }
             else { return false; }
+        }
+
+        public static string Role(string login)
+        {
+            int index = Employee.EmployeesData.FindIndex(a => a.Username == login);
+            string Role = Employee.EmployeesData[index].Role;
+
+            return Role;
+        }
+    }
+
+    public class SaveToCsv
+    {
+        public static void ExportCsv<Employee>(List<Employee> EmployeesData)
+        {
+            string fileName = "Employees";
+            var sb = new StringBuilder();
+            string filePath = Environment.CurrentDirectory;
+            var finalPath = Path.Combine(filePath, fileName + ".csv");
+
+            if (File.Exists(finalPath)) { File.Delete(finalPath); }
+
+            var header = "";
+            var info = typeof(Employee).GetProperties();
+            if (!File.Exists(finalPath))
+            {
+                var file = File.Create(finalPath);
+                file.Close();
+                foreach (var prop in typeof(Employee).GetProperties())
+                {
+                    header += prop.Name + ",";
+                }
+                header = header.Substring(0, header.Length - 2);
+                sb.AppendLine(header);
+                TextWriter sw = new StreamWriter(finalPath, true);
+                sw.Write(sb.ToString());
+                sw.Close();
+            }
+            foreach (var obj in EmployeesData)
+            {
+                sb = new StringBuilder();
+                var line = "";
+                foreach (var prop in info)
+                {
+                    line += prop.GetValue(obj, null) + ",";
+                }
+                line = line.Substring(0, line.Length - 2);
+                sb.AppendLine(line);
+                TextWriter sw = new StreamWriter(finalPath, true);
+                sw.Write(sb.ToString());
+                sw.Close();
+            }
+
         }
     }
 }

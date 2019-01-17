@@ -137,3 +137,4 @@ E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.WelcomeScr
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.GenerateResource.cache
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CoreCompileInputs.cache
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.csproj.CopyComplete
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.EmployeesList.resources
