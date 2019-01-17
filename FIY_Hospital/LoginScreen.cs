@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Employees_Space;
 
 namespace FIY_Hospital
 {
@@ -17,16 +18,24 @@ namespace FIY_Hospital
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
-            try
+            string Username = textBox1.Text;
+            string Password = textBox2.Text;
+
+            bool AllowLogin = LoginData.CheckLoginData(Username, Password);
+
+            if (AllowLogin)
             {
-                
+                this.Hide();
+                Client InitializeData = new Client();
+                InitializeData.Show();
             }
-            catch(IndexOutOfRangeException) { MessageBox.Show("Wrong username or password."); }
+            else MessageBox.Show("Wrong username or password");
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "PASSWORD") {
+            if (textBox2.Text == "PASSWORD")
+            {
                 textBox2.Clear();
                 textBox2.PasswordChar = '*';
             }
@@ -36,7 +45,8 @@ namespace FIY_Hospital
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "LOGIN") { textBox1.Text = ""; }
-            if (textBox2.Text == "") {
+            if (textBox2.Text == "")
+            {
                 textBox2.PasswordChar = '\0';
                 textBox2.Text = "PASSWORD";
             }
