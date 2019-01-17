@@ -14,13 +14,19 @@ namespace FIY_Hospital
 
         private void EmloyeesList_Load(object sender, EventArgs e)
         {
-            string Role = LoginData.Role(LoginScreen.Username);
-            int ColumnCount = 0;
+            //string Role = LoginData.Role(LoginScreen.Username);
+            int ColumnCount;
 
-            if (Role == "Admin") { ColumnCount = 7; }
-            else ColumnCount = 4;
-
-            GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, Role);
+            if (LoginScreen.Rola == "Admin")
+            {
+                ColumnCount = 7;
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, LoginScreen.Rola);
+            }
+            else
+            {
+                ColumnCount = 4;
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, LoginScreen.Rola);
+            }
         }
 
         private void EmloyeesList_FormClosing(object sender, FormClosingEventArgs e)
@@ -49,105 +55,117 @@ namespace FIY_Hospital
                     if (x == 0) { tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize)); }
                     if (y == 0)
                     {
-                        if (Role != "Admin")
-                        {
-                            Label lb = new Label();
-                            lb.Font = new Font(lb.Font, FontStyle.Bold);
-                            lb.Text = string.Format(Employee.HeadersEmployee[x]);
-                            tableLayoutPanel1.Controls.Add(lb, x, y);
-                        }
-                        else
+                        if (Role == "Admin")
                         {
                             Label lb = new Label();
                             lb.Font = new Font(lb.Font, FontStyle.Bold);
                             lb.Text = string.Format(Employee.HeadersAdmin[x]);
                             tableLayoutPanel1.Controls.Add(lb, x, y);
                         }
+                        else
+                        {
+                            Label lb = new Label();
+                            lb.Font = new Font(lb.Font, FontStyle.Bold);
+                            lb.Text = string.Format(Employee.HeadersEmployee[x]);
+                            tableLayoutPanel1.Controls.Add(lb, x, y);
+                        }
                     }
                     else
                     {
-                        if ((Role == "Admin"))
-                        {
-                            GenerateAdminCells(x, y);
-                        }
+                        if ((Role == "Admin")) { GenerateAdminCells(x, y, Client.Role); }
                         else
                         {
-                            GenerateCells(x, y);
+                            if (Client.Role == "Doctor") { GenerateCells(x, y, Client.Role); }
+                            else { GenerateCells(x, y, Client.Role); }
                         }
                     }
                 }
             }
         }
 
-        private void GenerateAdminCells(int x, int y)
+        private void GenerateAdminCells(int x, int y, string Role)
         {
-            switch (x)
+            for (int i = 0; i < Employee.EmployeesData.Count; i++)
             {
-                case 0:
-                    Label lb1 = new Label();
-                    lb1.Text = Employee.EmployeesData[y - 1].Username.ToString();
-                    tableLayoutPanel1.Controls.Add(lb1, x, y);
-                    break;
-                case 1:
-                    Label lb2 = new Label();
-                    lb2.Text = Employee.EmployeesData[y - 1].Password.ToString();
-                    tableLayoutPanel1.Controls.Add(lb2, x, y);
-                    break;
-                case 2:
-                    Label lb4 = new Label();
-                    lb4.Text = Employee.EmployeesData[y - 1].Name.ToString();
-                    tableLayoutPanel1.Controls.Add(lb4, x, y);
-                    break;
-                case 3:
-                    Label lb5 = new Label();
-                    lb5.Text = Employee.EmployeesData[y - 1].Surname.ToString();
-                    tableLayoutPanel1.Controls.Add(lb5, x, y);
-                    break;
-                case 4:
-                    Label lb6 = new Label();
-                    lb6.Text = Employee.EmployeesData[y - 1].Pesel.ToString();
-                    tableLayoutPanel1.Controls.Add(lb6, x, y);
-                    break;
-                case 5:
-                    Label lb7 = new Label();
-                    lb7.Text = Employee.EmployeesData[y - 1].PWD.ToString();
-                    tableLayoutPanel1.Controls.Add(lb7, x, y);
-                    break;
-                case 6:
-                    Label lb8 = new Label();
-                    lb8.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
-                    tableLayoutPanel1.Controls.Add(lb8, x, y);
-                    break;
-                default: break;
+                if (Employee.EmployeesData[i].Role == Role)
+                {
+                    switch (x)
+                    {
+                        case 0:
+                            Label lb1 = new Label();
+                            lb1.Text = Employee.EmployeesData[y - 1].Username.ToString();
+                            tableLayoutPanel1.Controls.Add(lb1, x, y);
+                            break;
+                        case 1:
+                            Label lb2 = new Label();
+                            lb2.Text = Employee.EmployeesData[y - 1].Password.ToString();
+                            tableLayoutPanel1.Controls.Add(lb2, x, y);
+                            break;
+                        case 2:
+                            Label lb4 = new Label();
+                            lb4.Text = Employee.EmployeesData[y - 1].Name.ToString();
+                            tableLayoutPanel1.Controls.Add(lb4, x, y);
+                            break;
+                        case 3:
+                            Label lb5 = new Label();
+                            lb5.Text = Employee.EmployeesData[y - 1].Surname.ToString();
+                            tableLayoutPanel1.Controls.Add(lb5, x, y);
+                            break;
+                        case 4:
+                            Label lb6 = new Label();
+                            lb6.Text = Employee.EmployeesData[y - 1].Pesel.ToString();
+                            tableLayoutPanel1.Controls.Add(lb6, x, y);
+                            break;
+                        case 5:
+                            Label lb7 = new Label();
+                            lb7.Text = Employee.EmployeesData[y - 1].PWD.ToString();
+                            tableLayoutPanel1.Controls.Add(lb7, x, y);
+                            break;
+                        case 6:
+                            Label lb8 = new Label();
+                            lb8.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
+                            tableLayoutPanel1.Controls.Add(lb8, x, y);
+                            break;
+                        default: break;
+                    }
+                }
             }
         }
 
-        private void GenerateCells(int x, int y)
+        private void GenerateCells(int x, int y, string Role)
         {
-            switch (x)
+            for (int i = 0; i < Employee.EmployeesData.Count; i++)
             {
-                case 0:
-                    Label lb1 = new Label();
-                    lb1.Text = Employee.EmployeesData[y - 1].Name.ToString();
-                    tableLayoutPanel1.Controls.Add(lb1, x, y);
-                    break;
-                case 1:
-                    Label lb2 = new Label();
-                    lb2.Text = Employee.EmployeesData[y - 1].Surname.ToString();
-                    tableLayoutPanel1.Controls.Add(lb2, x, y);
-                    break;
-                case 2:
-                    Label lb3 = new Label();
-                    lb3.Text = Employee.EmployeesData[y - 1].PWD.ToString();
-                    tableLayoutPanel1.Controls.Add(lb3, x, y);
-                    break;
-                case 3:
-                    Label lb4 = new Label();
-                    lb4.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
-                    tableLayoutPanel1.Controls.Add(lb4, x, y);
-                    break;
-                default: break;
+                if (Employee.EmployeesData[i].Role == Role)
+                {
+                    switch (x)
+                    {
+                        case 0:
+
+                            Label lb1 = new Label();
+                            lb1.Text = Employee.EmployeesData[y - 1].Name.ToString();
+                            tableLayoutPanel1.Controls.Add(lb1, x, y);
+                            break;
+                        case 1:
+                            Label lb2 = new Label();
+                            lb2.Text = Employee.EmployeesData[y - 1].Surname.ToString();
+                            tableLayoutPanel1.Controls.Add(lb2, x, y);
+                            break;
+                        case 2:
+                            Label lb3 = new Label();
+                            lb3.Text = Employee.EmployeesData[y - 1].PWD.ToString();
+                            tableLayoutPanel1.Controls.Add(lb3, x, y);
+                            break;
+                        case 3:
+                            Label lb4 = new Label();
+                            lb4.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
+                            tableLayoutPanel1.Controls.Add(lb4, x, y);
+                            break;
+                        default: break;
+                    }
+                }
             }
+
         }
     }
 }

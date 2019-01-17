@@ -6,6 +6,8 @@ namespace FIY_Hospital
 {
     public partial class LoginScreen : Form
     {
+        public static string Rola;
+
         public static string Username = "";
         string Password = "";
 
@@ -28,6 +30,7 @@ namespace FIY_Hospital
 
             if (AllowLogin == true)
             {
+                Rola = LoginData.Role(Username);
                 this.Hide();
                 Client InitializeData = new Client();
                 InitializeData.Show();

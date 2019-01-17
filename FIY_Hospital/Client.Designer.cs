@@ -119,7 +119,7 @@
             this.nursesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.nursesToolStripMenuItem.Name = "nursesToolStripMenuItem";
             this.nursesToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
-            this.nursesToolStripMenuItem.Click += new System.EventHandler(this.doctorsToolStripMenuItem_Click);
+            this.nursesToolStripMenuItem.Click += new System.EventHandler(this.nursesToolStripMenuItem_Click);
             // 
             // administratorsToolStripMenuItem
             // 
@@ -128,7 +128,7 @@
             this.administratorsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.administratorsToolStripMenuItem.Name = "administratorsToolStripMenuItem";
             this.administratorsToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
-            this.administratorsToolStripMenuItem.Click += new System.EventHandler(this.doctorsToolStripMenuItem_Click);
+            this.administratorsToolStripMenuItem.Click += new System.EventHandler(this.administratorsToolStripMenuItem_Click);
             // 
             // specialisationsToolStripMenuItem
             // 
