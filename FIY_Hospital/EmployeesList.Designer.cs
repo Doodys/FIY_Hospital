@@ -53,9 +53,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(605, 450);
+            this.ClientSize = new System.Drawing.Size(227, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EmployeesList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmloyeesList";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EmloyeesList_FormClosing);
             this.Load += new System.EventHandler(this.EmloyeesList_Load);

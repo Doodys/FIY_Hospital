@@ -7,6 +7,8 @@ namespace FIY_Hospital
 {
     public partial class EmployeesList : Form
     {
+        public string RoleClient;
+
         public EmployeesList()
         {
             InitializeComponent();
@@ -14,18 +16,20 @@ namespace FIY_Hospital
 
         private void EmloyeesList_Load(object sender, EventArgs e)
         {
-            //string Role = LoginData.Role(LoginScreen.Username);
+            RoleClient = Client.Role;
+
+            string RoleLogin = LoginData.Role(LoginScreen.Username);
             int ColumnCount;
 
-            if (LoginScreen.Rola == "Admin")
+            if (RoleLogin.Equals("Admin"))
             {
                 ColumnCount = 7;
-                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, LoginScreen.Rola);
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient);
             }
             else
             {
                 ColumnCount = 4;
-                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, LoginScreen.Rola);
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient);
             }
         }
 
@@ -36,7 +40,7 @@ namespace FIY_Hospital
             InitializeData.Show();
         }
 
-        private void GenerateEmployeeTable(int rowCount, int columnCount, string Role)
+        private void GenerateEmployeeTable(int rowCount, int columnCount, string RoleLogin, string RoleClient)
         {
             tableLayoutPanel1.Controls.Clear();
             tableLayoutPanel1.ColumnStyles.Clear();
@@ -44,7 +48,7 @@ namespace FIY_Hospital
 
             tableLayoutPanel1.ColumnCount = columnCount;
             tableLayoutPanel1.RowCount = rowCount;
-            tableLayoutPanel1.MaximumSize = new Size(rowCount * 20, Screen.PrimaryScreen.Bounds.Height - 200);
+            tableLayoutPanel1.MaximumSize = new Size(rowCount * 20, Screen.PrimaryScreen.Bounds.Height - 500);
 
             for (int x = 0; x < columnCount; x++)
             {
@@ -55,7 +59,7 @@ namespace FIY_Hospital
                     if (x == 0) { tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize)); }
                     if (y == 0)
                     {
-                        if (Role == "Admin")
+                        if (RoleLogin == "Admin")
                         {
                             Label lb = new Label();
                             lb.Font = new Font(lb.Font, FontStyle.Bold);
@@ -72,12 +76,8 @@ namespace FIY_Hospital
                     }
                     else
                     {
-                        if ((Role == "Admin")) { GenerateAdminCells(x, y, Client.Role); }
-                        else
-                        {
-                            if (Client.Role == "Doctor") { GenerateCells(x, y, Client.Role); }
-                            else { GenerateCells(x, y, Client.Role); }
-                        }
+                        if ((RoleLogin.Equals("Admin"))) { GenerateAdminCells(x, y, RoleClient); }
+                        else { GenerateCells(x, y, RoleClient); }
                     }
                 }
             }
@@ -85,87 +85,81 @@ namespace FIY_Hospital
 
         private void GenerateAdminCells(int x, int y, string Role)
         {
-            for (int i = 0; i < Employee.EmployeesData.Count; i++)
+            if (Employee.EmployeesData[y - 1].Role == Role)
             {
-                if (Employee.EmployeesData[i].Role == Role)
+                switch (x)
                 {
-                    switch (x)
-                    {
-                        case 0:
-                            Label lb1 = new Label();
-                            lb1.Text = Employee.EmployeesData[y - 1].Username.ToString();
-                            tableLayoutPanel1.Controls.Add(lb1, x, y);
-                            break;
-                        case 1:
-                            Label lb2 = new Label();
-                            lb2.Text = Employee.EmployeesData[y - 1].Password.ToString();
-                            tableLayoutPanel1.Controls.Add(lb2, x, y);
-                            break;
-                        case 2:
-                            Label lb4 = new Label();
-                            lb4.Text = Employee.EmployeesData[y - 1].Name.ToString();
-                            tableLayoutPanel1.Controls.Add(lb4, x, y);
-                            break;
-                        case 3:
-                            Label lb5 = new Label();
-                            lb5.Text = Employee.EmployeesData[y - 1].Surname.ToString();
-                            tableLayoutPanel1.Controls.Add(lb5, x, y);
-                            break;
-                        case 4:
-                            Label lb6 = new Label();
-                            lb6.Text = Employee.EmployeesData[y - 1].Pesel.ToString();
-                            tableLayoutPanel1.Controls.Add(lb6, x, y);
-                            break;
-                        case 5:
-                            Label lb7 = new Label();
-                            lb7.Text = Employee.EmployeesData[y - 1].PWD.ToString();
-                            tableLayoutPanel1.Controls.Add(lb7, x, y);
-                            break;
-                        case 6:
-                            Label lb8 = new Label();
-                            lb8.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
-                            tableLayoutPanel1.Controls.Add(lb8, x, y);
-                            break;
-                        default: break;
-                    }
+                    case 0:
+                        Label lb1 = new Label();
+                        lb1.Text = Employee.EmployeesData[y - 1].Username.ToString();
+                        tableLayoutPanel1.Controls.Add(lb1, x, y);
+                        break;
+                    case 1:
+                        Label lb2 = new Label();
+                        lb2.Text = Employee.EmployeesData[y - 1].Password.ToString();
+                        tableLayoutPanel1.Controls.Add(lb2, x, y);
+                        break;
+                    case 2:
+                        Label lb4 = new Label();
+                        lb4.Text = Employee.EmployeesData[y - 1].Name.ToString();
+                        tableLayoutPanel1.Controls.Add(lb4, x, y);
+                        break;
+                    case 3:
+                        Label lb5 = new Label();
+                        lb5.Text = Employee.EmployeesData[y - 1].Surname.ToString();
+                        tableLayoutPanel1.Controls.Add(lb5, x, y);
+                        break;
+                    case 4:
+                        Label lb6 = new Label();
+                        lb6.Text = Employee.EmployeesData[y - 1].Pesel.ToString();
+                        tableLayoutPanel1.Controls.Add(lb6, x, y);
+                        break;
+                    case 5:
+                        Label lb7 = new Label();
+                        lb7.Text = Employee.EmployeesData[y - 1].PWD.ToString();
+                        tableLayoutPanel1.Controls.Add(lb7, x, y);
+                        break;
+                    case 6:
+                        Label lb8 = new Label();
+                        lb8.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
+                        tableLayoutPanel1.Controls.Add(lb8, x, y);
+                        break;
+                    default: break;
                 }
             }
         }
 
         private void GenerateCells(int x, int y, string Role)
         {
-            for (int i = 0; i < Employee.EmployeesData.Count; i++)
+            if (Employee.EmployeesData[y - 1].Role == Role)
             {
-                if (Employee.EmployeesData[i].Role == Role)
+                switch (x)
                 {
-                    switch (x)
-                    {
-                        case 0:
+                    case 0:
 
-                            Label lb1 = new Label();
-                            lb1.Text = Employee.EmployeesData[y - 1].Name.ToString();
-                            tableLayoutPanel1.Controls.Add(lb1, x, y);
-                            break;
-                        case 1:
-                            Label lb2 = new Label();
-                            lb2.Text = Employee.EmployeesData[y - 1].Surname.ToString();
-                            tableLayoutPanel1.Controls.Add(lb2, x, y);
-                            break;
-                        case 2:
-                            Label lb3 = new Label();
-                            lb3.Text = Employee.EmployeesData[y - 1].PWD.ToString();
-                            tableLayoutPanel1.Controls.Add(lb3, x, y);
-                            break;
-                        case 3:
-                            Label lb4 = new Label();
-                            lb4.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
-                            tableLayoutPanel1.Controls.Add(lb4, x, y);
-                            break;
-                        default: break;
-                    }
+                        Label lb1 = new Label();
+                        lb1.Text = Employee.EmployeesData[y - 1].Name.ToString();
+                        tableLayoutPanel1.Controls.Add(lb1, x, y);
+                        break;
+                    case 1:
+                        Label lb2 = new Label();
+                        lb2.Text = Employee.EmployeesData[y - 1].Surname.ToString();
+                        tableLayoutPanel1.Controls.Add(lb2, x, y);
+                        break;
+                    case 2:
+                        Label lb3 = new Label();
+                        lb3.Text = Employee.EmployeesData[y - 1].PWD.ToString();
+                        tableLayoutPanel1.Controls.Add(lb3, x, y);
+                        break;
+                    case 3:
+                        Label lb4 = new Label();
+                        lb4.Text = Employee.EmployeesData[y - 1].Specialization.ToString();
+                        tableLayoutPanel1.Controls.Add(lb4, x, y);
+                        break;
+                    default: break;
                 }
             }
-
         }
+
     }
 }
