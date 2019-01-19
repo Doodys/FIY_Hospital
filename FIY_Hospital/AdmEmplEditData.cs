@@ -115,11 +115,16 @@ namespace FIY_Hospital
                 Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Surname = textBox4.Text;
                 Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Pesel = textBox5.Text;
                 Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Role = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+
                 if (comboBox2.Visible == true)
                 {
                     Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].PWD = textBox7.Text;
                     Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Username = comboBox2.Items[comboBox2.SelectedIndex].ToString();
                 }
+
+                this.Hide();
+                AdmEditEmployee InitializeData = new AdmEditEmployee();
+                InitializeData.Show();
             }
         }
     }

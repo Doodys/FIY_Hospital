@@ -116,7 +116,7 @@ namespace Employees_Space
         }
     }
 
-    public static class PeselValidator
+    public static class Validator
     {
         private static readonly int[] multipliers = { 1, 3, 7, 9, 1, 3, 7, 9, 1, 3 };
 
@@ -147,6 +147,14 @@ namespace Employees_Space
 
             int rest = sum % 10;
             return rest == 0 ? rest.ToString() : (10 - rest).ToString();
+        }
+
+        public static bool UpperOrLower(string word)
+        {
+            if (string.IsNullOrEmpty(word))
+                return false;
+
+            return char.IsUpper(word[0]) ? true : false;
         }
     }
 }
