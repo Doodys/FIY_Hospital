@@ -25,7 +25,8 @@ namespace FIY_Hospital
             {
                 MessageBox.Show("There is no Employees.csv file inf /bin/Debug/ folder!\n" +
                     "Create file with proper headers:\n" +
-                    "USERNAME, PASSWORD, ROLE, NAME, SURNAME, PESEL, PWD and SPECIALIZATION");
+                    "USERNAME, PASSWORD, ROLE, NAME, SURNAME, PESEL, PWD and SPECIALIZATION\n" +
+                    "and values separated with comma.");
                 Application.Exit();
             }
         }
