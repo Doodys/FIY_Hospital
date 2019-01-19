@@ -43,7 +43,7 @@
             this.laryngologistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nurseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shiftsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.cardiologistToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.urologistToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.laryngologistToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +51,6 @@
             this.administratorsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.administratorPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeeDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editShiftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -191,7 +190,7 @@
             // 
             this.shiftsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.shiftsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allEmployeesToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.cardiologistToolStripMenuItem1,
             this.urologistToolStripMenuItem1,
             this.laryngologistToolStripMenuItem1,
@@ -203,47 +202,52 @@
             this.shiftsToolStripMenuItem.Name = "shiftsToolStripMenuItem";
             this.shiftsToolStripMenuItem.Size = new System.Drawing.Size(160, 154);
             // 
-            // allEmployeesToolStripMenuItem
+            // toolStripMenuItem2
             // 
-            this.allEmployeesToolStripMenuItem.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Employees__Copy_;
-            this.allEmployeesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.allEmployeesToolStripMenuItem.Name = "allEmployeesToolStripMenuItem";
-            this.allEmployeesToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
+            this.toolStripMenuItem2.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Neurologist__Copy_;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(204, 156);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // cardiologistToolStripMenuItem1
             // 
             this.cardiologistToolStripMenuItem1.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Cardiologist__Copy_;
             this.cardiologistToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.cardiologistToolStripMenuItem1.Name = "cardiologistToolStripMenuItem1";
-            this.cardiologistToolStripMenuItem1.Size = new System.Drawing.Size(314, 156);
+            this.cardiologistToolStripMenuItem1.Size = new System.Drawing.Size(204, 156);
+            this.cardiologistToolStripMenuItem1.Click += new System.EventHandler(this.cardiologistToolStripMenuItem1_Click);
             // 
             // urologistToolStripMenuItem1
             // 
             this.urologistToolStripMenuItem1.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Urologist__Copy_;
             this.urologistToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.urologistToolStripMenuItem1.Name = "urologistToolStripMenuItem1";
-            this.urologistToolStripMenuItem1.Size = new System.Drawing.Size(314, 156);
+            this.urologistToolStripMenuItem1.Size = new System.Drawing.Size(204, 156);
+            this.urologistToolStripMenuItem1.Click += new System.EventHandler(this.urologistToolStripMenuItem1_Click);
             // 
             // laryngologistToolStripMenuItem1
             // 
             this.laryngologistToolStripMenuItem1.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Laryngologist__Copy_;
             this.laryngologistToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.laryngologistToolStripMenuItem1.Name = "laryngologistToolStripMenuItem1";
-            this.laryngologistToolStripMenuItem1.Size = new System.Drawing.Size(314, 156);
+            this.laryngologistToolStripMenuItem1.Size = new System.Drawing.Size(204, 156);
+            this.laryngologistToolStripMenuItem1.Click += new System.EventHandler(this.laryngologistToolStripMenuItem1_Click);
             // 
             // nurseToolStripMenuItem1
             // 
             this.nurseToolStripMenuItem1.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Nurses__Copy_;
             this.nurseToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.nurseToolStripMenuItem1.Name = "nurseToolStripMenuItem1";
-            this.nurseToolStripMenuItem1.Size = new System.Drawing.Size(314, 156);
+            this.nurseToolStripMenuItem1.Size = new System.Drawing.Size(204, 156);
+            this.nurseToolStripMenuItem1.Click += new System.EventHandler(this.nurseToolStripMenuItem1_Click);
             // 
             // administratorsToolStripMenuItem1
             // 
             this.administratorsToolStripMenuItem1.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_Administrators__Copy_;
             this.administratorsToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.administratorsToolStripMenuItem1.Name = "administratorsToolStripMenuItem1";
-            this.administratorsToolStripMenuItem1.Size = new System.Drawing.Size(314, 156);
+            this.administratorsToolStripMenuItem1.Size = new System.Drawing.Size(204, 156);
             this.administratorsToolStripMenuItem1.Click += new System.EventHandler(this.administratorsToolStripMenuItem1_Click);
             // 
             // administratorPanelToolStripMenuItem
@@ -251,7 +255,6 @@
             this.administratorPanelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.administratorPanelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editEmployeeDataToolStripMenuItem,
-            this.editShiftToolStripMenuItem,
             this.addEmployeeToolStripMenuItem,
             this.deleteEmployeeToolStripMenuItem});
             this.administratorPanelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -265,22 +268,15 @@
             this.editEmployeeDataToolStripMenuItem.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_EditEmployee__Copy_;
             this.editEmployeeDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editEmployeeDataToolStripMenuItem.Name = "editEmployeeDataToolStripMenuItem";
-            this.editEmployeeDataToolStripMenuItem.Size = new System.Drawing.Size(204, 156);
+            this.editEmployeeDataToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
             this.editEmployeeDataToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeDataToolStripMenuItem_Click);
-            // 
-            // editShiftToolStripMenuItem
-            // 
-            this.editShiftToolStripMenuItem.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_EditShifts__Copy_;
-            this.editShiftToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.editShiftToolStripMenuItem.Name = "editShiftToolStripMenuItem";
-            this.editShiftToolStripMenuItem.Size = new System.Drawing.Size(204, 156);
             // 
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_AddEmployee__Copy_;
             this.addEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(204, 156);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
@@ -288,7 +284,7 @@
             this.deleteEmployeeToolStripMenuItem.Image = global::FIY_Hospital.Properties.Resources.FIY_Hospital_DeleteEmployee__Copy_;
             this.deleteEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(204, 156);
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(314, 156);
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
@@ -340,17 +336,16 @@
         private System.Windows.Forms.ToolStripMenuItem neurologistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laryngologistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nurseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cardiologistToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem urologistToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem laryngologistToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nurseToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem administratorsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editEmployeeDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editShiftToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

@@ -119,5 +119,46 @@ namespace FIY_Hospital
         {
             MessageBox.Show("Admins work 24/7. They do not eat and sleep, do not have life.");
         }
+
+        private void cardiologistToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Specialization = "Cardiologist";
+            this.Hide();
+            SchCard InitializeData = new SchCard();
+            InitializeData.Show();
+        }
+
+        private void urologistToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Specialization = "Urologist";
+            this.Hide();
+            SchCard InitializeData = new SchCard();
+            InitializeData.Show();
+        }
+
+        private void laryngologistToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Specialization = "Laryngologist";
+            this.Hide();
+            SchCard InitializeData = new SchCard();
+            InitializeData.Show();
+        }
+
+        private void nurseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Specialization = "";
+            Role = "Nurse";
+            this.Hide();
+            SchCard InitializeData = new SchCard();
+            InitializeData.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Specialization = "Neurologist";
+            this.Hide();
+            SchCard InitializeData = new SchCard();
+            InitializeData.Show();
+        }
     }
 }
