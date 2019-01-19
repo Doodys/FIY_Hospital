@@ -54,7 +54,7 @@
             this.button1.Font = new System.Drawing.Font("Calibri", 18F);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(65, 228);
+            this.button1.Location = new System.Drawing.Point(60, 230);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 43);
             this.button1.TabIndex = 34;

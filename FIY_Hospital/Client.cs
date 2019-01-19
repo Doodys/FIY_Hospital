@@ -1,5 +1,6 @@
 ﻿using Employees_Space;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace FIY_Hospital
@@ -16,7 +17,7 @@ namespace FIY_Hospital
 
         private void Client_Load(object sender, EventArgs e)
         {
-            if(!LoginScreen.Rola.Equals("Admin")) { menuStrip.Items[3].Available = false; }            
+            if (!LoginScreen.Rola.Equals("Admin")) { menuStrip.Items[3].Available = false; }
         }
 
         private void doctorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,7 +46,8 @@ namespace FIY_Hospital
 
         private void Client_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            SaveToCsv.ExportCsv(Employee.EmployeesData);
+            Process.GetCurrentProcess().Kill(); //brutal, but with no System.Colletions exception, which seems unable to fix.
         }
 
         private void cardiologistToolStripMenuItem_Click(object sender, EventArgs e)
