@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Windows.Forms;
 using Employees_Space;
 
@@ -16,7 +17,17 @@ namespace FIY_Hospital
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             Show();
-            Employee._Convert();
+            try
+            {
+                Employee._Convert();
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("There is no Employees.csv file inf /bin/Debug/ folder!\n" +
+                    "Create file with proper headers:\n" +
+                    "USERNAME, PASSWORD, ROLE, NAME, SURNAME, PESEL, PWD and SPECIALIZATION");
+                Application.Exit();
+            }
         }
 
         private void LOGIN_Click(object sender, EventArgs e)

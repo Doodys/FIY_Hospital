@@ -47,7 +47,7 @@ namespace FIY_Hospital
         private void Client_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveToCsv.ExportCsv(Employee.EmployeesData);
-            Process.GetCurrentProcess().Kill(); //brutal, but with no System.Colletions exception, which seems unable to fix.
+            Process.GetCurrentProcess().Kill(); //brutal, but with there's System.Colletions exception, which seems unable to fix.
         }
 
         private void cardiologistToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,6 +113,11 @@ namespace FIY_Hospital
             this.Hide();
             AdmEmplFire InitializeData = new AdmEmplFire();
             InitializeData.Show();
+        }
+
+        private void administratorsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Admins work 24/7. They do not eat and sleep, do not have life.");
         }
     }
 }
