@@ -88,9 +88,11 @@ namespace FIY_Hospital
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool checker = true;
             if (textBox1.Text.Contains(" ") ||
                 textBox2.Text.Contains(" "))
             {
+                checker = false;
                 MessageBox.Show("You can not use spaces in USERNAME or PASSWORD!");
             }
             else if (!Regex.IsMatch(textBox3.Text, @"^[\p{L}\p{M}' ]+$") ||
@@ -100,32 +102,44 @@ namespace FIY_Hospital
                 Validator.UpperOrLower(textBox3.Text) == false ||
                 Validator.UpperOrLower(textBox4.Text) == false)
             {
+                checker = false;
                 MessageBox.Show("Wrong NAME or SURNAME format!");
             }
             else if (Validator.ValidatePesel(Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Pesel) == false)
             {
+                checker = false;
                 MessageBox.Show("Wrong PESEL!");
             }
-            else if (comboBox2.Visible == true) { if (!textBox7.Text.Length.Equals(7)) { MessageBox.Show("Wrong PWD format!"); } }
-            else
+            else if (comboBox2.Visible == true)
             {
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Username = textBox1.Text;
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Password = textBox2.Text;
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Name = textBox3.Text;
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Surname = textBox4.Text;
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Pesel = textBox5.Text;
-                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Role = comboBox1.Items[comboBox1.SelectedIndex].ToString();
-
-                if (comboBox2.Visible == true)
+                if (!textBox7.Text.Length.Equals(7))
                 {
-                    Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].PWD = textBox7.Text;
-                    Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Username = comboBox2.Items[comboBox2.SelectedIndex].ToString();
+                    checker = false;
+                    MessageBox.Show("Wrong PWD format!");
                 }
-
-                this.Hide();
-                AdmEditEmployee InitializeData = new AdmEditEmployee();
-                InitializeData.Show();
             }
+
+            if(checker == true) { UpdData(); }
+        }
+
+        private void UpdData()
+        {
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Username = textBox1.Text;
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Password = textBox2.Text;
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Name = textBox3.Text;
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Surname = textBox4.Text;
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Pesel = textBox5.Text;
+            Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Role = comboBox1.Items[comboBox1.SelectedIndex].ToString();
+
+            if (comboBox2.Visible == true)
+            {
+                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].PWD = textBox7.Text;
+                Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Specialization = comboBox2.Items[comboBox2.SelectedIndex].ToString();
+            }
+
+            this.Hide();
+            AdmEditEmployee InitializeData = new AdmEditEmployee();
+            InitializeData.Show();
         }
     }
 }
