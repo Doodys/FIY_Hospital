@@ -108,7 +108,9 @@ namespace FIY_Hospital
 
         private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdmEmplFire InitializeData = new AdmEmplFire();
+            InitializeData.Show();
         }
     }
 }

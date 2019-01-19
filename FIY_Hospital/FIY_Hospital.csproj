@@ -55,11 +55,29 @@
     <Compile Include="AdmEditEmployee.Designer.cs">
       <DependentUpon>AdmEditEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdmEmplAddData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmEmplAddData.Designer.cs">
+      <DependentUpon>AdmEmplAddData.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdmEmplEditData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdmEmplEditData.Designer.cs">
       <DependentUpon>AdmEmplEditData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmEmplFire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmEmplFire.Designer.cs">
+      <DependentUpon>AdmEmplFire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdmEmplFireAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmEmplFireAccept.Designer.cs">
+      <DependentUpon>AdmEmplFireAccept.cs</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
       <SubType>Form</SubType>
@@ -101,8 +119,17 @@
     <EmbeddedResource Include="AdmEditEmployee.resx">
       <DependentUpon>AdmEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdmEmplAddData.resx">
+      <DependentUpon>AdmEmplAddData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdmEmplEditData.resx">
       <DependentUpon>AdmEmplEditData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmEmplFire.resx">
+      <DependentUpon>AdmEmplFire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdmEmplFireAccept.resx">
+      <DependentUpon>AdmEmplFireAccept.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>

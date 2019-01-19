@@ -23,6 +23,7 @@ namespace Employees_Space
         public static string[] HeadersAdmin = { "Username", "Password",  "Name", "Surname", "Pesel", "PWD", "Specialization" }; //0, 1, 3, 4, 5, 6, 7
         public static string[] HeadersAdminCheck = {"ID", "Username", "Password", "Name", "Surname", "Pesel", "PWD", "Specialization" }; //0, 1, 3, 4, 5, 6, 7
 
+
         public static void _Convert()
         {
             string filePath = Environment.CurrentDirectory;

@@ -141,3 +141,6 @@ E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.EmployeesL
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.EmployeesListSpec.resources
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEditEmployee.resources
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplEditData.resources
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplAddData.resources
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplFire.resources
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplFireAccept.resources

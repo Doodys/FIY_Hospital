@@ -125,7 +125,7 @@ namespace FIY_Hospital
                 });
             }
 
-            MessageBox.Show("Employee " + textBox3.Text + " " + textBox4.Text + " added!");
+            MessageBox.Show("Employee '" + textBox3.Text + " " + textBox4.Text + "' added!");
 
             this.Hide();
             Client InitializeData = new Client();
