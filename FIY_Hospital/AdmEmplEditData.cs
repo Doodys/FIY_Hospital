@@ -90,7 +90,9 @@ namespace FIY_Hospital
         {
             bool checker = true;
             if (textBox1.Text.Contains(" ") ||
-                textBox2.Text.Contains(" "))
+                textBox2.Text.Contains(" ") ||
+                !textBox1.Text.Equals("") ||
+                !textBox2.Text.Equals(""))
             {
                 checker = false;
                 MessageBox.Show("You can not use spaces in USERNAME or PASSWORD!");
@@ -100,7 +102,9 @@ namespace FIY_Hospital
                 textBox3.Text.Contains(" ") ||
                 textBox4.Text.Contains(" ") ||
                 Validator.UpperOrLower(textBox3.Text) == false ||
-                Validator.UpperOrLower(textBox4.Text) == false)
+                Validator.UpperOrLower(textBox4.Text) == false ||
+                !textBox3.Text.Equals("") ||
+                !textBox4.Text.Equals(""))
             {
                 checker = false;
                 MessageBox.Show("Wrong NAME or SURNAME format!");
