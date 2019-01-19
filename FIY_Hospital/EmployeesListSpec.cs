@@ -63,7 +63,7 @@ namespace FIY_Hospital
 
             tableLayoutPanel1.ColumnCount = columnCount;
             tableLayoutPanel1.RowCount = rowCount;
-            tableLayoutPanel1.MaximumSize = new Size(rowCount * 20, Screen.PrimaryScreen.Bounds.Height - 500);
+            tableLayoutPanel1.MaximumSize = new Size(rowCount * 200, Screen.PrimaryScreen.Bounds.Height - 500);
 
             for (int x = 0; x < columnCount; x++)
             {
