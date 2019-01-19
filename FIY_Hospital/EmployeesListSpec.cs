@@ -1,22 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Employees_Space;
 
 namespace FIY_Hospital
 {
-    public partial class EmployeesList : Form
+    public partial class EmployeesListSpec : Form
     {
         string RoleClient;
+        string SpecClient;
 
-        public EmployeesList()
+        public EmployeesListSpec()
         {
             InitializeComponent();
         }
 
-        private void EmloyeesList_Load(object sender, EventArgs e)
+        private void EmployeesListSpec_Load(object sender, EventArgs e)
         {
             RoleClient = Client.Role;
+            SpecClient = Client.Specialization;
 
             string RoleLogin = LoginData.Role(LoginScreen.Username);
             int ColumnCount;
@@ -24,23 +32,30 @@ namespace FIY_Hospital
             if (RoleLogin.Equals("Admin"))
             {
                 ColumnCount = 7;
-                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient);
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient, SpecClient);
             }
             else
             {
                 ColumnCount = 4;
-                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient);
+                GenerateEmployeeTable(Employee.EmployeesData.Count + 1, ColumnCount, RoleLogin, RoleClient, SpecClient);
             }
         }
 
-        private void EmloyeesList_FormClosing(object sender, FormClosingEventArgs e)
+        private void EmployeesListSpec_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             Client InitializeData = new Client();
             InitializeData.Show();
         }
 
-        private void GenerateEmployeeTable(int rowCount, int columnCount, string RoleLogin, string RoleClient)
+        private void Powrot_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Client GoBack = new Client();
+            GoBack.Show();
+        }
+
+        private void GenerateEmployeeTable(int rowCount, int columnCount, string RoleLogin, string RoleClient, string SpecClient)
         {
             tableLayoutPanel1.Controls.Clear();
             tableLayoutPanel1.ColumnStyles.Clear();
@@ -88,16 +103,16 @@ namespace FIY_Hospital
                     }
                     else
                     {
-                        if ((RoleLogin.Equals("Admin"))) { GenerateAdminCells(x, y, RoleClient); }
-                        else { GenerateCells(x, y, RoleClient); }
+                        if ((RoleLogin.Equals("Admin"))) { GenerateAdminCells(x, y, RoleClient, SpecClient); }
+                        else { GenerateCells(x, y, RoleClient, SpecClient); }
                     }
                 }
             }
         }
 
-        private void GenerateAdminCells(int x, int y, string Role)
+        private void GenerateAdminCells(int x, int y, string Role, string Spec)
         {
-            if (Employee.EmployeesData[y - 1].Role == Role)
+            if (Employee.EmployeesData[y - 1].Role == Role && Employee.EmployeesData[y - 1].Specialization == Spec)
             {
                 switch (x)
                 {
@@ -183,13 +198,14 @@ namespace FIY_Hospital
             }
         }
 
-        private void GenerateCells(int x, int y, string Role)
+        private void GenerateCells(int x, int y, string Role, string Spec)
         {
-            if (Employee.EmployeesData[y - 1].Role == Role)
+            if (Employee.EmployeesData[y - 1].Role == Role && Employee.EmployeesData[y - 1].Specialization == Spec)
             {
                 switch (x)
                 {
                     case 0:
+
                         Label lb1 = new Label()
                         {
                             AutoSize = false,
@@ -236,17 +252,6 @@ namespace FIY_Hospital
                     default: break;
                 }
             }
-        }
-
-        private void Powrot_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Client GoBack = new Client();
-            GoBack.Show();
-        }
-
-        private void tableLayoutPanel1_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        {
         }
     }
 }

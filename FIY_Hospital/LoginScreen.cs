@@ -27,10 +27,10 @@ namespace FIY_Hospital
             Password = textBox2.Text;
 
             bool AllowLogin = LoginData.CheckLoginData(Username, Password);
+            Rola = LoginData.Role(Username);
 
             if (AllowLogin == true)
-            {
-                Rola = LoginData.Role(Username);
+            {                
                 this.Hide();
                 Client InitializeData = new Client();
                 InitializeData.Show();

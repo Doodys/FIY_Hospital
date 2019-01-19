@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdmEditEmployee.Designer.cs">
+      <DependentUpon>AdmEditEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="EmployeesList.Designer.cs">
       <DependentUpon>EmployeesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesListSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeesListSpec.Designer.cs">
+      <DependentUpon>EmployeesListSpec.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
@@ -80,11 +92,17 @@
     <Compile Include="WelcomeScreen.Designer.cs">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdmEditEmployee.resx">
+      <DependentUpon>AdmEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesList.resx">
       <DependentUpon>EmployeesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesListSpec.resx">
+      <DependentUpon>EmployeesListSpec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
