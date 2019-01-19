@@ -13,6 +13,8 @@ namespace FIY_Hospital
 {
     public partial class AdmEditEmployee : Form
     {
+        public static int SelectedId;
+
         public AdmEditEmployee()
         {
             InitializeComponent();
@@ -35,6 +37,18 @@ namespace FIY_Hospital
             this.Hide();
             Client InitializeData = new Client();
             InitializeData.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex > -1)
+            {
+                SelectedId = int.Parse(comboBox1.Text);
+                this.Hide();
+                AdmEmplEditData InitializeData = new AdmEmplEditData();
+                InitializeData.Show();
+            }
+            else { MessageBox.Show("You didn't select any employee's ID!"); }
         }
 
         private void GenerateEmployeeTable(int rowCount)
