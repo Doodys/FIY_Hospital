@@ -94,7 +94,7 @@ namespace Employees_Space
                 {
                     header += prop.Name + ",";
                 }
-                header = header.Substring(0, header.Length - 2);
+                header = header.Substring(0, header.Length - 1);
                 sb.AppendLine(header);
                 TextWriter sw = new StreamWriter(finalPath, true);
                 sw.Write(sb.ToString());
@@ -108,7 +108,7 @@ namespace Employees_Space
                 {
                     line += prop.GetValue(obj, null) + ",";
                 }
-                line = line.Substring(0, line.Length - 2);
+                line = line.Substring(0, line.Length - 1);
                 sb.AppendLine(line);
                 TextWriter sw = new StreamWriter(finalPath, true);
                 sw.Write(sb.ToString());

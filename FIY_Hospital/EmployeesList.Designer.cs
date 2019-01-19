@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(193, 98);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tableLayoutPanel1_CellPaint);
             // 
@@ -62,7 +62,7 @@
             this.Powrot.Font = new System.Drawing.Font("Calibri", 18F);
             this.Powrot.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Powrot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Powrot.Location = new System.Drawing.Point(33, 12);
+            this.Powrot.Location = new System.Drawing.Point(30, 12);
             this.Powrot.Name = "Powrot";
             this.Powrot.Size = new System.Drawing.Size(160, 43);
             this.Powrot.TabIndex = 2;
@@ -75,8 +75,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(227, 197);
+            this.ClientSize = new System.Drawing.Size(220, 195);
             this.Controls.Add(this.Powrot);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EmployeesList";

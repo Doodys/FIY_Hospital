@@ -57,27 +57,23 @@ namespace FIY_Hospital
         private void button1_Click(object sender, EventArgs e)
         {
             bool checker = true;
-            if (textBox1.Text.Contains(" ") ||
-                textBox2.Text.Contains(" ") ||
-                !textBox1.Text.Equals("") ||
-                !textBox2.Text.Equals(""))
+            if (textBox1.Text.Equals("") ||
+                textBox2.Text.Equals(""))
             {
                 checker = false;
-                MessageBox.Show("You can not use spaces in USERNAME or PASSWORD!");
+                MessageBox.Show("Wrong USERNAME or PASSWORD format!");
             }
             else if (!Regex.IsMatch(textBox3.Text, @"^[\p{L}\p{M}' ]+$") ||
-                !Regex.IsMatch(textBox4.Text, @"^[\p{L}\p{M}' ]+$") ||
-                textBox3.Text.Contains(" ") ||
-                textBox4.Text.Contains(" ") ||
+                !Regex.IsMatch(textBox4.Text, @"^[\p{L}\p{M}' ]+$") ||              
                 Validator.UpperOrLower(textBox3.Text) == false ||
                 Validator.UpperOrLower(textBox4.Text) == false ||
-                !textBox3.Text.Equals("") ||
-                !textBox4.Text.Equals(""))
+                textBox3.Text.Equals("") ||
+                textBox4.Text.Equals(""))
             {
                 checker = false;
                 MessageBox.Show("Wrong NAME or SURNAME format!");
             }
-            else if (Validator.ValidatePesel(Employee.EmployeesData[AdmEditEmployee.SelectedId - 1].Pesel) == false)
+            else if (Validator.ValidatePesel(textBox5.Text) == false)
             {
                 checker = false;
                 MessageBox.Show("Wrong PESEL!");
@@ -130,6 +126,14 @@ namespace FIY_Hospital
             this.Hide();
             Client InitializeData = new Client();
             InitializeData.Show();
+        }
+
+        private void AdmEmplAddData_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            Client InitializeData = new Client();
+            InitializeData.Show();
+
         }
     }
 }

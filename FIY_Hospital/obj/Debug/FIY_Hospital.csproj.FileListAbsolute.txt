@@ -144,3 +144,4 @@ E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplEdi
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplAddData.resources
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplFire.resources
 E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.AdmEmplFireAccept.resources
+E:\Kody\FIY_Hospital\FIY_Hospital\FIY_Hospital\obj\Debug\FIY_Hospital.SchCard.resources
