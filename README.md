@@ -21,8 +21,8 @@ Required functionalities:
     - Employee can't work day by day (minimum one day off between shifts)
     - Max one Doctor's specialization during one shift
     
- Programming language: C#
- Framework: .Net Standard
- IDE: Visual Studio Community
+ - Programming language: C#
+ - Framework: .Net Standard
+ - IDE: Visual Studio Community
  
  Made in Windows Forms, layout fully drawn by Michał Dudys
