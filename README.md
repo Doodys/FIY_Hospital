@@ -1,6 +1,8 @@
 # FIY_Hospital
 Project "Fix It Yourself Hospital - Management App"
 
+- Recommended login: admin, password: admin
+
 Required functionalities:
 
 - Employees roles: Admin, Nurse, Doctor
