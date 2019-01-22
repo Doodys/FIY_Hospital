@@ -7,8 +7,8 @@ Required functionalities:
 - Doctors have one of specializations (e.g. laryngologist) + PWD number
 - Fully working login screen
 - Defining user's role by login and password
-- If role is Admin user has full access to every function (e.g. login panel)
-- Login panel:
+- If role is Admin user has full access to every function (e.g. admin panel)
+- Admin panel:
   - Add employee
   - Delete employee
   - Change employee's data
