@@ -68,10 +68,14 @@ namespace Employees_Space
 
         public static string Role(string login)
         {
-            int index = Employee.EmployeesData.FindIndex(a => a.Username == login);
-            string Role = Employee.EmployeesData[index].Role;
+            try
+            {
+                int index = Employee.EmployeesData.FindIndex(a => a.Username == login);
+                string Role = Employee.EmployeesData[index].Role;
 
-            return Role;
+                return Role;
+            }
+            catch (Exception) { return ""; }
         }
     }
 
